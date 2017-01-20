@@ -1,7 +1,7 @@
 # weapp-ywgo
 **喜欢就star吧，爱折腾可以自己克隆本地运行试试，直接打开wx开发工具打开运行即可！**
 
-**本人博客地址：[www.cmblogs.com/vipzhou](www.cmblogs.com/vipzhou "菜@芽的博客园")**
+**本人博客地址：[www.cmblogs.com/vipzhou](http://www.cnblogs.com/vipzhou "菜@芽的博客园")**
 
 业务GO app的小程序版简单实现
 
