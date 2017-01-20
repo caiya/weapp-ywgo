@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<form bindsubmit="onSubmit">
+  <view class="container">
+    <view class='row' catchtap="onFocus">
+      <textarea class='text' maxlength="5000" auto-height="true" name="content" focus="{{focus}}" auto-focus="true" value="" placeholder="{{placeholdertext}}" />
+    </view>
+    <view class='bottom'>
+      <button formType="submit" class='btn success'>发送</button>
+    </view>
+  </view>
+</form>

@@ -1,0 +1,90 @@
+
+<!--index.wxml-->
+
+<!--水平滚动-->
+<import src="../template/article.wxml" />
+<view>
+  <view class="header">
+    <scroll-view scroll-x="true" style="display: flex" class="sv__container" bindscroll="bindscroll">
+      <block wx:for="{{categories}}" wx:key="id" wx:if="{{ categories.length }}">
+        <view class="sv__item {{ currentTab ==item.id ? 'active':'' }}" bindtap="changeCategory" data-id="{{ item.id }}" data-index="{{ item.index }}">
+          {{ item.name }}
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
+<swiper class="swiper" current="{{currentTopItem}}" bindchange="bindChange" duration="300" circular="true">
+  
+  <!--全部-->
+  <swiper-item>
+    <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData">
+      <block wx:for="{{top}}" wx:key="id" wx:if="{{ top.length }}">
+        <template is="{{ 'newsStyle1' }}" data="{{ ...item }}" />
+      </block>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData">
+      <block wx:for="{{shehui}}" wx:key="id" wx:if="{{ shehui.length }}">
+        <template is="{{ 'newsStyle1' }}" data="{{ ...item }}" />
+      </block>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData">
+      <block wx:for="{{guonei}}" wx:key="id" wx:if="{{ guonei.length }}">
+        <template is="{{ 'newsStyle1' }}" data="{{ ...item }}" />
+      </block>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData">
+      <block wx:for="{{yule}}" wx:key="id" wx:if="{{ yule.length }}">
+        <template is="{{ 'newsStyle1' }}" data="{{ ...item }}" />
+      </block>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData">
+      <block wx:for="{{tiyu}}" wx:key="id" wx:if="{{ tiyu.length }}">
+        <template is="{{ 'newsStyle1' }}" data="{{ ...item }}" />
+      </block>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData">
+      <block wx:for="{{junshi}}" wx:key="id" wx:if="{{ junshi.length }}">
+        <template is="{{ 'newsStyle1' }}" data="{{ ...item }}" />
+      </block>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData">
+      <block wx:for="{{keji}}" wx:key="id" wx:if="{{ keji.length }}">
+        <template is="{{ 'newsStyle1' }}" data="{{ ...item }}" />
+      </block>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData">
+      <block wx:for="{{caijing}}" wx:key="id" wx:if="{{ caijing.length }}">
+        <template is="{{ 'newsStyle1' }}" data="{{ ...item }}" />
+      </block>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData">
+      <block wx:for="{{shishang}}" wx:key="id" wx:if="{{ shishang.length }}">
+        <template is="{{ 'newsStyle1' }}" data="{{ ...item }}" />
+      </block>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData">
+      <block wx:for="{{articles9}}" wx:key="id" wx:if="{{ articles9.length }}">
+        <template is="{{ 'newsStyle1' }}" data="{{ ...item }}" />
+      </block>
+    </scroll-view>
+  </swiper-item>
+</swiper>

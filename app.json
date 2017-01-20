@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/hot/index",
+    "pages/my/index",
+    "pages/my/feedback/index",
+    "pages/my/information/index",
+    "pages/dynamic/index",
+    "pages/dynamic/detail"
+  ],
+  "window": {
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#4BC1D2",
+    "navigationBarTitleText": "业务GO",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#353535",
+    "selectedColor": "#4BC1D2",
+    "borderStyle": "black",
+    "backgroundColor": "#FFF",
+    "list": [
+      {
+        "pagePath": "pages/hot/index",
+        "text": "热点",
+        "iconPath": "static/images/icon@hot.png",
+        "selectedIconPath": "static/images/icon@hot-hover.png"
+      },
+      {
+        "pagePath": "pages/circle/index",
+        "text": "圈子",
+        "iconPath": "static/images/icon@coterie.png",
+        "selectedIconPath": "static/images/icon@coterie-hover.png"
+      },
+      {
+        "pagePath": "pages/tool/index",
+        "text": "工具",
+        "iconPath": "static/images/icon@tool.png",
+        "selectedIconPath": "static/images/icon@tool-hover.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "static/images/icon@my.png",
+        "selectedIconPath": "static/images/icon@my-hover.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 60000,
+    "downloadFile": 60000
+  }
+}

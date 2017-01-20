@@ -1,0 +1,68 @@
+
+<!--新闻列表页面模板-->
+
+<!--
+id:news.news_id,
+title:news.news_title,
+data:news.news_date,
+parise:news.news_praise_count,
+comment:news.news_comment_count,
+summary:news.news_summary,
+icons:news.news_icon,
+style:news.news_style
+-->
+
+<!--无图模式-->
+<template name="newsStyle0">
+  <navigator url="">
+    <view class="article__item">
+      <view class="article__info">
+        <view class="article__title article__title__large">从动画到数据应用，轻松了解专业H5设计工具从动画到数据应用，轻松了解专业H5设计工具</view>
+        <view class="article__desc">
+          <text class="article__source" wx:if="{{ tag }}">{{ tag }}</text>
+          <text class="article__time">{{ date }}</text>
+          <view class="article__count">
+            <image class="article__icon" src="/static/images/icon-comt.png"></image>
+            <text>{{ comment }}</text>
+            <image class="article__icon" src="/static/images/icon-priaze.png"></image>
+            <text>{{ parise }}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</template>
+
+<!--图文模式-->
+<template name="newsStyle1">
+  <view class="padding1rem BGwhite listWrap" data-c_e_id="wx_viewd5e8c118">
+    <view class="c-minheight wx-view_POFK6s" data-c_e_id="wx_view_001ec3c0">
+      <view class="c-minheight bottomGrayboder wx-view_pOFBSt" data-c_e_id="wx_viewa0e94324">
+        <navigator class="TBpaddinghalfrem listitem-navigator" data-c_e_id="wx_navigator8274c9db" hover-class="navigator-hover" url="/pages/hot/news/detail/index">
+          <image class="wx-image_tBcdCT2" data-c_e_id="wx_image83040396" mode="aspectFill" src="{{thumbnail_pic_s}}" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url({{thumbnail_pic_s}}); "
+          />
+          <view class="wx-view_cPj0ok2" data-c_e_id="wx_view5c4899b3">
+            <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text444e3e7f">{{title}}</text>
+            <text class="c-source">来源：{{author_name}}</text>
+            <text class="c-block c-ellipse wx-text_LS2Jup2" data-c_e_id="wx_text88ef823c">{{title}}</text>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</template>
+
+<!--图集模式-->
+<template name="newsStyle2">
+<swiper class="swiper__container" wx:if="{{ swiperList.length }}">
+  <swiper-item wx:for="{{swiperList}}" wx:key="id">
+    <view class="swiper__content">
+      <image src="{{item.image}}" class="swiper__item" mode="aspectFill" />
+      <view class="swiper__desc">
+        <text class="swiper__text">{{ item.title }}</text>
+        <text class="swiper__id">[{{ index+1 }}/{{ swiperList.length }}]</text>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>
+</template>

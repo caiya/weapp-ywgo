@@ -1,0 +1,33 @@
+@import "../template/commentCell.wxss";
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+Page{
+  background-color: #eaeaea;
+}
+Page{
+    background-color: white;
+}
+.scrollview{
+    height: 100%;
+}
+/*分隔线*/
+.divide_view{
+    height: 20rpx;
+    background-color: #f2f2f2;
+}
+.comment_text{
+    display:block;
+    height:68rpx;
+    font-size:26rpx;
+    color:#888888;
+    line-height:68rpx;
+    margin-left: 15rpx;
+}
+

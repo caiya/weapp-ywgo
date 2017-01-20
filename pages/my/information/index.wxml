@@ -1,0 +1,22 @@
+
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo" catchtap="selectPicture">
+    <image class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"></image>
+    <text class="userinfo-nickname">点击更换</text>
+  </view>
+  <view class="info_list">
+    <block wx:for="{{userListInfo}}" wx:key="icon">
+      <view class="weui_cell" bindtap="{{item.tapEvent}}">
+        <view class="weui_cell_hd">
+          <image src="{{item.icon}}"></image>
+        </view>
+        <view class="weui_cell_bd">
+          <view class="weui_cell_bd_p"> {{item.text}} </view>
+        </view>
+        <view class="with_text">{{item.value}}</view>
+        <view class="with_arrow"></view>
+      </view>
+    </block>
+  </view>
+</view>
