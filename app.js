@@ -22,6 +22,9 @@ App({
           })
         }
       })
+      
+      
+      
     }
   },
   getNewsInfo(typeId) {
